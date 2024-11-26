@@ -1,4 +1,4 @@
-package org.dilarakiraz.composempnotes.data
+package org.dilarakiraz.composempnotes.data.model
 
 
 import kotlinx.serialization.SerialName

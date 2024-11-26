@@ -1,4 +1,4 @@
-package org.dilarakiraz.composempnotes.apiClient
+package org.dilarakiraz.composempnotes.data.api
 
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
