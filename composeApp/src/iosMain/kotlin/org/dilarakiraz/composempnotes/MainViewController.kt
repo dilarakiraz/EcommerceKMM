@@ -1,4 +1,3 @@
-package org.dilarakiraz.composempnotes
 
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
@@ -6,17 +5,14 @@ import androidx.compose.ui.window.ComposeUIViewController
 import com.seiko.imageloader.ImageLoader
 import com.seiko.imageloader.LocalImageLoader
 import com.seiko.imageloader.component.setupDefaultComponents
-import com.seiko.imageloader.intercept.bitmapMemoryCacheConfig
-import com.seiko.imageloader.intercept.imageMemoryCacheConfig
+import com.seiko.imageloader.defaultImageResultMemoryCache
 import okio.Path.Companion.toPath
+import org.dilarakiraz.composempnotes.App
 import platform.Foundation.NSCachesDirectory
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
-import com.seiko.imageloader.intercept.painterMemoryCacheConfig
-
 import platform.Foundation.NSUserDomainMask
 
 fun MainViewController() = ComposeUIViewController {
-
     CompositionLocalProvider(
         LocalImageLoader provides remember { generateImageLoader() },
     ) {
@@ -24,23 +20,17 @@ fun MainViewController() = ComposeUIViewController {
     }
 }
 
+
 fun generateImageLoader(): ImageLoader {
     return ImageLoader {
         components {
             setupDefaultComponents()
         }
         interceptor {
-            // cache 32MB bitmap
-            bitmapMemoryCacheConfig {
-                maxSize(32 * 1024 * 1024) // 32MB
-            }
-            // cache 50 image
-            imageMemoryCacheConfig {
-                maxSize(50)
-            }
-            // cache 50 painter
-            painterMemoryCacheConfig {
-                maxSize(50)
+            // cache 100 success image result, without bitmap
+            defaultImageResultMemoryCache()
+            memoryCacheConfig {
+                maxSizeBytes(32 * 1024 * 1024) // 32MB
             }
             diskCacheConfig {
                 directory(getCacheDir().toPath().resolve("image_cache"))
