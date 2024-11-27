@@ -13,6 +13,7 @@ androidx-test-junit = "1.1.5"
 compose = "1.5.4"
 compose-compiler = "1.5.5"
 compose-plugin = "1.5.11"
+coreSplashscreen = "1.0.1"
 imageLoader = "1.7.1"
 junit = "4.13.2"
 kotlin = "1.9.21"
@@ -22,6 +23,7 @@ ktorClientContentNegotiation = "2.3.5"
 mvvmCore = "0.16.1"
 
 [libraries]
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "imageLoader" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }

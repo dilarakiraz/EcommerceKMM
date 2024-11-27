@@ -15,10 +15,16 @@ import com.seiko.imageloader.defaultImageResultMemoryCache
 import com.seiko.imageloader.option.androidContext
 import okio.Path.Companion.toOkioPath
 import App
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        installSplashScreen()
 
         setContent {
             CompositionLocalProvider(

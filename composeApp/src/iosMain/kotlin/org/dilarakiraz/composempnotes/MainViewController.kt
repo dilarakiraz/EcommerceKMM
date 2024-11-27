@@ -7,7 +7,6 @@ import com.seiko.imageloader.LocalImageLoader
 import com.seiko.imageloader.component.setupDefaultComponents
 import com.seiko.imageloader.defaultImageResultMemoryCache
 import okio.Path.Companion.toPath
-import org.dilarakiraz.composempnotes.App
 import platform.Foundation.NSCachesDirectory
 import platform.Foundation.NSSearchPathForDirectoriesInDomains
 import platform.Foundation.NSUserDomainMask
