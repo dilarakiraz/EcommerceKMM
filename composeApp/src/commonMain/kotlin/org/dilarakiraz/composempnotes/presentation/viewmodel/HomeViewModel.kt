@@ -2,7 +2,6 @@ package org.dilarakiraz.composempnotes.presentation.viewmodel
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.dilarakiraz.composempnotes.data.model.Product
 import dev.icerock.moko.mvvm.viewmodel.ViewModel

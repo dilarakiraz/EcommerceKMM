@@ -16,6 +16,7 @@ import androidx.compose.material3.SearchBar
 import androidx.compose.material3.SearchBarDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -57,17 +58,25 @@ fun SearchBarComponent(
         },
         shape = RoundedCornerShape(8.dp),
         colors = SearchBarDefaults.colors(
-            containerColor = MaterialTheme.colorScheme.surface
+            containerColor = androidx.compose.ui.graphics.Color.LightGray
         ),
         content = {
             TextField(
                 value = query,
                 onValueChange = onQueryChange,
-                placeholder = { Text("Search Products") },
+                placeholder = {
+                    Text(
+                        text = "Search Products",
+                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                    )
+                },
                 textStyle = TextStyle(
                     fontSize = 16.sp,
                     lineHeight = 24.sp,
                     color = MaterialTheme.colorScheme.onSurface
+                ),
+                colors = TextFieldDefaults.textFieldColors(
+                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.1f)
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
