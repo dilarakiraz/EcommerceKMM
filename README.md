@@ -21,5 +21,5 @@ If you face any issues, please report them on [GitHub](https://github.com/JetBra
 You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
 
 | **Splash Screen**      | **Home Screen**       | 
-|----------------------|-------------------------|
-| ![splash](https://github.com/dilarakiraz/EcommerceKMM/blob/main/ss/splash.png) | ![home](https://github.com/dilarakiraz/EcommerceKMM/blob/main/ss/home.png) | 
+|-------------------------|-----------------------|
+| <img src="https://github.com/dilarakiraz/EcommerceKMM/blob/main/ss/splash.png" alt="Splash Screen" width="300"/> | <img src="https://github.com/dilarakiraz/EcommerceKMM/blob/main/ss/home.png" alt="Home Screen" width="300"/> |
